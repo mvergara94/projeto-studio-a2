@@ -1,0 +1,180 @@
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main:after {
+  content: '';
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.05926120448179273) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: -1;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  min-height: 20vh;
+  /* background-color: #dfa100; */
+}
+
+.imagem-logo {
+  max-width: 125px;
+  border-radius: 50%;
+}
+
+.menu ul {
+  display: flex;
+  gap: 80px;
+}
+
+.menu .link {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.menu .link.ativo {
+  color: #dfa100;
+  font-weight: bolder;
+}
+
+.icones ul {
+  display: flex;
+  max-width: 100px;
+  gap: 30px;
+}
+
+.icones .icone-imagem {
+  max-width: 30px;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 79vh;
+}
+
+.principal .titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  max-width: 500px;
+  line-height: 45px;
+  text-align: center;
+  /* background-color: #dfa100; */
+}
+
+.principal .descricao {
+  width: 500px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+.botoes-principal ul {
+  display: flex;
+  gap: 40px;
+}
+
+.botoes-principal .botao-principal {
+  border: 1px solid white;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 15px 40px;
+  transition: 0.2s ease-in-out;
+}
+
+.botoes-principal .botao-principal:hover {
+  background-color: #dfa100;
+}
+
+.botoes-principal .botao-principal.junte-se {
+  background-color: #dfa100;
+  border: 1px solid transparent;
+}
+
+.botoes-principal .botao-principal.junte-se:hover {
+  border: 1px solid white;
+}
+
+.rodape {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 225px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0px;
+}
+
+.rodape .social {
+  color: white;
+  font-weight: medium;
+  font-size: 12px;
+}
+
+.rodape .linha-imagem {
+  height: 4px;
+}
+
+.rodape ul {
+  display: flex;
+  gap: 2px;
+}
+
+.rodape .icone-social {
+  transition: 0.3s ease-in-out;
+  height: 25px;
+}
+
+.rodape .icone-social:hover {
+  transform: scale(1.2);
+}
+
+.carrossel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.carrossel .imagem {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: none;
+  animation: mudarImagem 0.9s;
+}
+
+.carrossel .imagem.ativa {
+  display: block;
+}
+
+@keyframes mudarImagem {
+  from {
+    opacity: 0.85;
+  }
+  to {
+    opacity: 1;
+  }
+}
